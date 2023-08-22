@@ -18,6 +18,7 @@ import Checkout from "./Pages/Checkout"
 import Layout from "./Components/Layout"
 import Error from "./Pages/Error"
 import { requireAuth } from "./utils"
+import Success from "./Success"
 
 
 
@@ -37,7 +38,8 @@ import { requireAuth } from "./utils"
          element={<Checkout />}
          loader={async ({ request }) => await requireAuth(request)}
          />
-        
+        <Route path="success" element={<Success />}></Route>
+
         <Route path="products" element={<Products />}
          errorElement={<Error />}
          loader={productsLoader} /> 

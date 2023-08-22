@@ -120,6 +120,22 @@
   color: #4D4D4D;
   }
 
+  .pay-now {
+    background-color: #161616;
+    color: #fff;
+    font-size: 30px;
+    width: 170px;
+    padding: 10px 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .pay-now:hover {
+    background-color: #4D4D4D;
+    color:#f5f5f5 ;
+  }
+
 .add-to-cart button{
     margin-top: 10px;
     margin-bottom: 20px;
@@ -127,6 +143,7 @@
     font-size: 25px;
     cursor: pointer;
   }
+
 
 .add-to-cart button:hover {
    background-color: black;
@@ -410,20 +427,66 @@ font-size: 20px;
  font-size: 20px;
 }
 
-.logout button{
-  background-color: black;
-  border: none;
-  border-radius: 6px;
-  height: 65px;
-  width: 150px;
-  margin-top: 90px;
-  color: white;
-  font-family: "Inter", sans-serif;
-  cursor: pointer;
-  font-size: 23px;
+.success img {
+  position: relative;
+  top: 50px;
+  left: 50px;
 }
 
-.logout button:hover {
-  background-color: gray;
-  color: #fff;
+.line-1 {
+  position: relative; 
+  bottom: 300px;
+  left: 700px; 
+  font-size: 40px;
 }
+
+.line-2 {
+  position: relative; 
+  bottom: 300px;
+  left: 700px; 
+  font-size: 20px;
+}
+
+.back-to-home {
+  position: relative; 
+  left: 860px; 
+  bottom: 200px;
+  background-color: #161616;
+  color: #fff;
+  font-size: 22px;
+  width: 170px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cart {
+  position: relative;
+  top: 80px;
+  left: 365px;
+}
+
+
+.cart h1{
+ font-size: 35px;
+ color: #cc0000;
+}
+
+.cart h2{
+  font-size: 30px;
+  color: green;
+}
+
+.do-it {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  background-color: #161616;
+  color: #fff;
+  font-size: 28px;
+  width: 170px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+

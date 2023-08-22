@@ -2,6 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 
+
+
 const Checkout = () => {
   const state = useSelector((state)=> state.handleCart)
 
@@ -22,7 +24,7 @@ const Checkout = () => {
 
 return(
   <>
-  <div className="back-to-shop">
+   <div className="back-to-shop">
      <NavLink to='/products' type="submit" >Back Shopping</NavLink>
           </div>
 <div className='checkout-total'>
@@ -30,8 +32,10 @@ return(
 {state.map(itemList)}
 <span className='total'>Total Amount : </span>₹{total}
 <br></br>
-<button>PAY NOW</button>
+<div className='pay-now'>
+<NavLink to="/success">Pay Now</NavLink>
 </div>
+</div>0
   </>
           )                
     }

@@ -32,20 +32,19 @@ export async function action({ request }) {
     } 
 }
 
+
+
 export default function Login() {
 
-function fakeLogOut() {
-localStorage.removeItem("loggedin")
-console.log(navigation.state);
-}
 
-    
     const errorMessage = useActionData()
     const message = useLoaderData()
-    const navigation = useNavigation()     
-return (
-    <>
-     <div className="login-container">
+    const navigation = useNavigation()
+   
+
+    return (
+        <>
+        <div className="login-container">
       <h1>Sign in to your account</h1>
       <br />
      {message && <h2 className="red">{message}</h2>}
@@ -58,13 +57,13 @@ return (
               name="email"
               type="email"
               placeholder="c@ndy.com"
-          />
+              />
           <input
               name="password"
               type="password"
-              placeholder="S123"
-          />
-          <button 
+              placeholder="s123"
+              />
+             <button 
                disabled={navigation.state === "submitting"}
                >
           {navigation.state === "submitting" 
@@ -72,15 +71,10 @@ return (
                      : "Login"
                     }
           </button>
-          </Form>
-      <div className="logout">
-       <button onClick={fakeLogOut}
-       disabled={navigation.state === ""}>    
-        Logout               
-       </button>
-      </div>
+    </Form>
+         
       </div>
 </>
 )   
+}     
 
-}

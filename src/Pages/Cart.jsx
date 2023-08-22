@@ -37,7 +37,11 @@ return(
 
 const emptyCart = () => {
   return(
-    <h1>Your Cart is Empty</h1>
+    <div className='cart'>
+       <h1>Your Cart is Empty</h1>
+       <h2> Click here to add some cool products</h2>
+       <NavLink to="/products" className="do-it">Let's Do It</NavLink>
+    </div>
   )
 }
 

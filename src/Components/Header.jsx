@@ -2,6 +2,10 @@ import logo from "./skull.png"
 import { Link, NavLink  } from "react-router-dom"
 import { useSelector } from "react-redux"
 
+function fakeLogOut() {
+   localStorage.removeItem("loggedin")
+  }
+
 function Header(){
    const state = useSelector((state)=> state.handleCart)
    const activeStyles = {
@@ -9,6 +13,8 @@ function Header(){
       textDecoration: "underline",
       color: "#161616"
   }
+
+
 
   return (
     
@@ -26,15 +32,19 @@ function Header(){
       <NavLink to="login"
       style={({isActive}) => isActive ? activeStyles : null}>Login</NavLink>
              
-             
-         
-             </nav>
+             <div className="logout">
+       <button onClick={fakeLogOut}>
+        Logout
+       </button>
+             </div>   
+          
+    </nav>
   
   
   </header>
 
   
-  
+
   
   
   
