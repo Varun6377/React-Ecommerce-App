@@ -35,7 +35,7 @@ export function loader({ params }) {
         </button>
           </div>
         <div className='go-to-cart'>     
-        <NavLink to='/cart' type="submit">Go To Cart</NavLink>
+        <NavLink to='/cart' type="submit">--Go-To-Cart--</NavLink>
         </div>
      </div>
        </>

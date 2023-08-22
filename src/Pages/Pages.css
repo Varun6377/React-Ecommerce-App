@@ -89,6 +89,10 @@
   font-size: 18px;
 }
 
+.details-page {
+  padding-inline: 25px;
+}
+
 .details- button {
   cursor: pointer;
   border: none;
@@ -130,6 +134,7 @@
   }
 
 .go-to-cart a {
+  font-size: 20px;
   font-weight: bold;
   color: #4D4D4D;
 }
@@ -353,32 +358,33 @@ font-size: 20px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 500px;    
-}
+  max-width: 500px;   
+ }
 
-.login-form > input {
+.login-form input {
   border: 1px solid rgba(209, 213, 219);
   height: 60px;
   text-indent: 10px;
   font-family: "Inter", sans-serif;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  font-size: 18px;
   font-weight: 400;
 }
 
-.login-form > input:focus {
+.login-form input:focus {
   outline: none;
 }
 
-.login-form > input:first-of-type {
+.login-form input:first-of-type {
   border-radius: 6px 6px 0px 0px;
 }
 
-.login-form > input:last-of-type {
+.login-form input:last-of-type {
   border-radius: 0px 0px 6px 6px;
   border-top: none;
 }
 
-.login-form > button {
+.login-form button {
   background-color: black;
   border: none;
   border-radius: 6px;
@@ -387,9 +393,10 @@ font-size: 20px;
   color: white;
   font-family: "Inter", sans-serif;
   cursor: pointer;
+  font-size: 23px;
 }
 
-.login-form > button:disabled {
+.login-form button:disabled {
   background-color: #aaaaaa;
   cursor: not-allowed;
 }
@@ -398,3 +405,25 @@ font-size: 20px;
   color: #cc0000;
 }
 
+.support {
+ padding-inline: 50px;
+ font-size: 20px;
+}
+
+.logout button{
+  background-color: black;
+  border: none;
+  border-radius: 6px;
+  height: 65px;
+  width: 150px;
+  margin-top: 90px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.logout button:hover {
+  background-color: gray;
+  color: #fff;
+}

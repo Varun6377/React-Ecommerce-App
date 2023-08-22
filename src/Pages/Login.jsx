@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { 
     useLoaderData, 
     useNavigation,
@@ -14,6 +14,7 @@ export function loader({ request }) {
 }
 
 export async function action({ request }) {
+
     const formData = await request.formData()
     const email = formData.get("email")
     const password = formData.get("password")
@@ -23,18 +24,22 @@ export async function action({ request }) {
     try {
         const data = await loginUser({ email, password })
         localStorage.setItem("loggedin", true)
-        return redirect(pathname)
-           
+        return (
+        redirect(pathname)
+        )
     } catch(err) {
         return err.message
-} 
-}
-
-function fakeLogOut() {
-    localStorage.removeItem("loggedin")
+    } 
 }
 
 export default function Login() {
+
+function fakeLogOut() {
+localStorage.removeItem("loggedin")
+console.log(navigation.state);
+}
+
+    
     const errorMessage = useActionData()
     const message = useLoaderData()
     const navigation = useNavigation()     
@@ -45,7 +50,6 @@ return (
       <br />
      {message && <h2 className="red">{message}</h2>}
      {errorMessage && <h3 className="red">{errorMessage}</h3>}
-
       <Form
        method="post"
        className="login-form"
@@ -66,12 +70,17 @@ return (
           {navigation.state === "submitting" 
                      ? "Logging in..." 
                      : "Login"
-             }
+                    }
           </button>
-      </Form>
+          </Form>
+      <div className="logout">
+       <button onClick={fakeLogOut}
+       disabled={navigation.state === ""}>    
+        Logout               
+       </button>
       </div>
-      <button onClick={fakeLogOut}>Log Out</button>
-          </>
-      )
+      </div>
+</>
+)   
+
 }
-            
