@@ -22,7 +22,7 @@ const Checkout = () => {
 return(
   <>
        <div className="back-to-shop">
-     <NavLink to='/products' type="submit" >Back Shopping</NavLink>
+     <NavLink to='/products' type="submit" >← Back Shopping</NavLink>
           </div>   
      <div className='checkout-total'>
      <h1 className='ord-sum'>Order summary</h1>

@@ -518,6 +518,10 @@ font-size: 20px;
   border-radius: 5px;
 }
 
+.back-to-home:hover {
+  color: brown;
+}
+
 .cart {
   position: relative;
   top: 80px;
@@ -561,7 +565,7 @@ font-size: 20px;
   cursor: pointer;
   border-radius: 5px;
 }
-
+back-to-home
 .do-it:hover {
   background-color: #4D4D4D;
 }
