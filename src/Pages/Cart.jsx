@@ -1,64 +1,96 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { addCart, delCart } from "../redux/action"
+import { addToCart, deleteFromCart, removeFromCart, emptyCart } from '../redux/features/cartSlice.js'
+import { useEffect } from "react";
 import { NavLink } from 'react-router-dom';
-import "./Pages.css"
-  
-function Cart() {
-  const state = useSelector((state)=> state.handleCart)
+
+
+export default function Cart() {
+  const {cart} = useSelector((state)=>state.allCart);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart))
+  }, [cart])
+
   const dispatch = useDispatch()
 
-  const delProduct = (product) =>{
-    dispatch(delCart(product))
-}
-  
-  const addProduct = (product) => {
-    dispatch(addCart(product))
-}
+  const addProduct = (product) => { 
+    dispatch(addToCart(product))
+   }
 
-const product = (product) =>{
-return(
+  const deleteProduct = (product) => {
+    dispatch(deleteFromCart(product))
+  }
 
-<div key={product.id} className='cart-details'>
-  <img src={product.imageUrl} width={350}/>
-  <h1 className='name'>{product.name}</h1>
-  <h1 className='price'>₹{product.price}</h1>
-  <div className='qty-buttons'>
-  <button className="minus" onClick={()=> delProduct(product)} >
-    <i >-</i></button>
-   {product.qty}
-   <button  className="plus" onClick={()=> addProduct(product)} >
-   <i>+</i></button>
-  </div>
-  <p className='qty-price'> Total Amount : ₹{product.qty * product.price}</p>
-  </div>
-)  
+  const removeProduct = (product) => { 
+    dispatch(removeFromCart(product))
+   }
+
+   const clearCart = ()=>{
+    dispatch(emptyCart())
 }
 
-const emptyCart = () => {
-  return(
-    <div className='cart'>
-       <h1>Your Cart is Empty</h1>
-       <h2> Click here to add some cool products</h2>
-       <NavLink to="/products" className="do-it">Let's Do It</NavLink>
-    </div>
-  )
-}
 
-const button = () => {
+function ProductsList() {
+
   return (
+    <div>
+  <button className='empty'
+  onClick={() => clearCart()}>
+Empty</button>
+{
+cart.map((product)=>{
+return ( 
+  <div key={product.id}  className='cart-details'>
+<img src={product.imageUrl} width={300}/>
+<h1 className='name'>{product.name}</h1>
+<h1 className='price'>₹{product.price}</h1>
+  
+  <div className='qty-buttons'>
+<button className="minus"
+onClick={product.qty <=1 ?() =>deleteProduct(product.id) :()=> removeProduct(product)}>
+<i>-</i></button>
+<h3 className='pro-qty'>{product.qty}</h3>
+<button className="plus"
+onClick={()=> addProduct(product)}>
+<i>+</i></button>    
+</div>
+<button className='del'
+onClick={() => deleteProduct(product.id)}>
+<i>Delete</i></button>
+
+  <p className='qty-price'>
+Total Amount : ₹{product.qty * product.price}
+</p>  
 <div className='checkout-cont'>  
 <NavLink to="checkout" className='checkout'>Checkout</NavLink>
+  </div> 
+</div> 
+
+
+)})}
+   
+  </div>
+)
+
+}
+
+const initialCart = () => {
+  return(
+    <div className='cart'>
+      <img src="https://i.ibb.co/m8YLngv/cart.jpg" />
+       <h1>Your Cart is Empty</h1>
+       <h2> Add some cool products</h2>
+       <NavLink to="/products" className="do-it">Let's Do It</NavLink>
     </div>
   )
 }
 
 return(
   <>
-  {state.length === 0 && emptyCart()}
-  {state.length !== 0 && state.map(product)}
-  {state.length !== 0 && button()}
+  {cart.length === 0 ? initialCart() : ProductsList()}
   </>
 )
+
 }
-export default Cart
+  

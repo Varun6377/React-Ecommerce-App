@@ -7,7 +7,8 @@ function fakeLogOut() {
   }
 
 function Header(){
-   const state = useSelector((state)=> state.handleCart)
+   const {cart} = useSelector((state)=> state.allCart)
+   
    const activeStyles = {
       fontWeight: "bold",
       textDecoration: "underline",
@@ -28,11 +29,11 @@ function Header(){
       <NavLink to="about"
       style={({isActive}) => isActive ? activeStyles : null}>About</NavLink>
       <NavLink to="cart"
-      style={({isActive}) => isActive ? activeStyles : null}>Cart({state.length})</NavLink>
+      style={({isActive}) => isActive ? activeStyles : null}>Cart({cart.length})</NavLink>
       <NavLink to="login"
       style={({isActive}) => isActive ? activeStyles : null}>Login</NavLink>
              
-             <div className="logout">
+             <div className="logout">  
        <button onClick={fakeLogOut}>
         Logout
        </button>

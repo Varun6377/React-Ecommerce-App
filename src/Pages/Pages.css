@@ -3,11 +3,17 @@
   text-align: center;
   color: white;
 }
-  .title {
+ 
+.home-page img {
+  width: 1100px;
+  border-radius: 5px;
+} 
+
+.title {
   position: absolute;
-  font-weight: 600;
-  top: 9px;
-  left: 12%;
+  font-weight: 800;
+  top: 4px;
+  left: 8.5%;
   font-size: 45px;
 }
 
@@ -15,8 +21,8 @@
   position: absolute;
   top: 85px;
   font-weight: 600;
-  font-size: 25px;
-  left: 14.5%;
+  font-size: 35px;
+  left: 11%;
 }
 
 .home-page a {
@@ -27,17 +33,21 @@
   text-decoration: none;
   background-color: black;
   border: none;
-  width: 30%;
-  height: 90px;
+  width: 35%;
+  height: 100px;
   margin-top: 27px;
   padding-block: 1.25rem;
   color: white;
-  font-size: 41px;
+  font-size: 48px;
   font-weight: 700;
   border-radius: 10px;
   cursor: pointer;
-  left: 17%;
+  left: 16%;
   bottom: 80px;
+}
+
+.home-page a:hover {
+ background-color: gray;
 }
 
 .qty-buttons {
@@ -47,6 +57,18 @@
 }
 
 .minus  {
+  position: relative;
+  top: 4px;
+  left: 15px;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+
+.empty {
+  position: relative;
+  left: 20px;
   font-size: 20px;
   text-decoration: none;
   padding: 2px 10px;
@@ -55,24 +77,56 @@
   cursor: pointer;
 }
 
+.empty:hover {
+  background-color: black;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.del {
+  position: relative;
+  bottom: 90px;
+  left: 28px;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 2px 10px;
+  cursor: pointer;
+}
+
+.del:hover {
+  background-color: black;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
 .minus:hover  {
   background-color: black;
   color: #ffffff;
+  border-radius: 5px;
+
 }
 
 .plus  {
+  position: relative;
+  bottom: 100px;
+  left: 85px;
   font-size: 20px;
   text-decoration: none;
   color: #4D4D4D;
   padding: 2px 10px;
-  margin-right: 10px;
-  margin-left: 10px;
   cursor: pointer;
 }
 
 .plus:hover  {
   background-color: black;
   color: #ffffff;
+  border-radius: 5px;
+}
+
+.pro-qty {
+  position: relative;
+  left: 5%;
+  bottom: 48px;
 }
 
 .list {
@@ -90,7 +144,7 @@
 }
 
 .details-page {
-  padding-inline: 25px;
+  padding-inline: 50px;
 }
 
 .details- button {
@@ -181,7 +235,7 @@
   transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 10px;
   ;
-}
+}.qty-price
 
 .product-type:hover {
   color: #fff;
@@ -283,7 +337,7 @@ font-size: 20px;
 }
 
 .cart-details {
-  padding-inline: 10px;
+  padding-inline: 50px;
 }
 
 .name {
@@ -298,12 +352,16 @@ font-size: 20px;
 }
 
 .qty-price {
-  font-size: 20px;
+  position: relative;
+  bottom: 99px;
+  font-size: 30px;
   margin-bottom: 7px;
   font-weight: 400;
  }
 
 .checkout-cont {
+  position: relative;
+  bottom: 90px;
   margin-top: 30px;
   font-weight: bold;
 }
@@ -466,27 +524,56 @@ font-size: 20px;
   left: 365px;
 }
 
+.cart img{
+  position: relative;
+  top: 20px;
+  border: none;
+  background-color: #fff;
+  margin-top: -100px;
+  width: 500px;
+}
 
 .cart h1{
- font-size: 35px;
- color: #cc0000;
+  position: relative;
+  top: 30px;
+  left: 92px;
+  font-size: 38px;
 }
 
 .cart h2{
+  position: relative;
+  top: 50px;
+  left: 2%;
   font-size: 30px;
-  color: green;
+  font-weight: lighter;
 }
 
 .do-it {
   position: relative;
-  top: 30px;
-  left: 30px;
+  bottom: 10px;
+  left: 28.5%;
   background-color: #161616;
   color: #fff;
   font-size: 28px;
+  font-weight: 600;
   width: 170px;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
 }
 
+.do-it:hover {
+  background-color: #4D4D4D;
+}
+
+.back-to-products {
+  padding-inline: 20px;
+  color:#4D4D4D;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.back-to-products:hover {
+color: brown;
+
+}

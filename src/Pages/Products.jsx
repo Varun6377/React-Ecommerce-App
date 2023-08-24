@@ -4,10 +4,9 @@ import { Link,
    useSearchParams,
    useLoaderData,
    defer,
-   Await
- } from 'react-router-dom'
+   Await,
+   } from 'react-router-dom'
 import { getProducts } from '../api.js'
-import { ErrorBoundary } from 'react-app-error-boundary'
 
 
 export function loader() {
@@ -94,6 +93,7 @@ const productElements =(search(displayedProducts).map(product =>
 
 return (
   <>
+  
 <div className='search'>
 <label htmlFor="search-form" >
   <div className='wrapper'>
@@ -175,14 +175,12 @@ onChange={(e) => sortProductsByPrice(e)}>
 
 return(
   <>    
-  <ErrorBoundary>
 <React.Suspense fallback={<h2>Loading products...</h2>}>
      <Await resolve={dataPromise.products}>
        {renderElements}
      </Await>
   </React.Suspense>
-  </ErrorBoundary>
-</> 
+ </> 
 
 )
 }
