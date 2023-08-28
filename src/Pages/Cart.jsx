@@ -39,8 +39,9 @@ function ProductsList() {
   onClick={() => clearCart()}>
 Empty</button>
 {
-cart.map((product)=>{
-return ( 
+  cart.map((product)=>{
+    return ( 
+  <>
   <div key={product.id}  className='cart-details'>
 <img src={product.imageUrl} width={300}/>
 <h1 className='name'>{product.name}</h1>
@@ -62,14 +63,14 @@ onClick={() => deleteProduct(product.id)}>
   <p className='qty-price'>
 Total Amount : ₹{product.qty * product.price}
 </p>  
-<div className='checkout-cont'>  
-<NavLink to="checkout" className='checkout'>Checkout</NavLink>
-  </div> 
 </div> 
-
+</>
 
 )})}
    
+<div className='checkout-cont'>  
+<NavLink to="checkout" className='checkout'>Checkout</NavLink>
+  </div> 
   </div>
 )
 

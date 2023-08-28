@@ -19,11 +19,13 @@ export async function action({ request }) {
     const email = formData.get("email")
     const password = formData.get("password")
    const pathname = new URL(request.url)
-         .searchParams.get("redirectTo") || "/cart/checkout"
-     
-    try {
-        const data = await loginUser({ email, password })
-        localStorage.setItem("loggedin", true)
+         .searchParams.get("redirectTo") || "/"
+         
+         try {
+             const data = await loginUser({ email, password })
+             localStorage.setItem("loggedin", true)
+             window.location.assign("/");
+
         return (
         redirect(pathname)
         )

@@ -511,7 +511,7 @@ font-size: 20px;
   bottom: 200px;
   background-color: #161616;
   color: #fff;
-  font-size: 22px;
+  font-size: 202px;
   width: 170px;
   padding: 10px 20px;
   cursor: pointer;
@@ -579,5 +579,21 @@ back-to-home
 
 .back-to-products:hover {
 color: brown;
+}
 
+.not-found {
+position: relative;
+top: 100px;
+left: 220px;
+}
+
+.return-button {
+  position: relative;
+  top: 20px;
+  left: 30px;
+  font-size: 25px
+}
+
+.return-button:hover {
+color: brown;
 }

@@ -1,14 +1,29 @@
-import logo from "./skull.png"
 import { Link, NavLink  } from "react-router-dom"
 import { useSelector } from "react-redux"
+import { useEffect, useState } from "react"
+
+function Header(){
+   const [isLogged, setisLogged] = useState(false)
+
+useEffect(() => {
+   checkStorage();
+   return () => {};
+ }, [isLogged]);
+ function checkStorage() {
+   if (localStorage.getItem("loggedin")) {
+     setisLogged(true);
+   } else {
+     setisLogged(false);
+   }
+ }
 
 function fakeLogOut() {
    localStorage.removeItem("loggedin")
+   setisLogged(false);
   }
 
-function Header(){
    const {cart} = useSelector((state)=> state.allCart)
-   
+
    const activeStyles = {
       fontWeight: "bold",
       textDecoration: "underline",
@@ -28,16 +43,23 @@ function Header(){
       style={({isActive}) => isActive ? activeStyles : null}>Products</NavLink>
       <NavLink to="about"
       style={({isActive}) => isActive ? activeStyles : null}>About</NavLink>
-      <NavLink to="cart"
-      style={({isActive}) => isActive ? activeStyles : null}>Cart({cart.length})</NavLink>
-      <NavLink to="login"
-      style={({isActive}) => isActive ? activeStyles : null}>Login</NavLink>
-             
-             <div className="logout">  
+     <NavLink to="cart"
+     style={({isActive}) => isActive ? activeStyles : null}>Cart({cart.length})</NavLink>
+     
+
+     {!isLogged ? (
+        <NavLink to="login"
+        style={({isActive}) => isActive ? activeStyles : null}>Login</NavLink>
+      ) : (
+         <div className="logout">  
        <button onClick={fakeLogOut}>
         Logout
        </button>
-             </div>   
+        </div>   
+      )
+             
+     }
+      
           
     </nav>
   

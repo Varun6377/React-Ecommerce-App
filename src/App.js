@@ -19,6 +19,7 @@ import Layout from "./Components/Layout"
 import Error from "./Pages/Error"
 import { requireAuth } from "./utils"
 import Success from "./Success"
+import NotFound from "./Components/NotFound"
 
 
 
@@ -46,13 +47,9 @@ import Success from "./Success"
         <Route path="products/:id" element={<ProductsDetail />} 
          errorElement={<Error />}
          loader={productsDetailLoader} />  
+       <Route path="*" element={<NotFound />} />
       </Route>
           ))
-
-          
-
-
-    
 
 function App() {
      return (
