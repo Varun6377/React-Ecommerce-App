@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { 
     useLoaderData, 
     useNavigation,
@@ -19,12 +19,11 @@ export async function action({ request }) {
     const email = formData.get("email")
     const password = formData.get("password")
    const pathname = new URL(request.url)
-         .searchParams.get("redirectTo") || "/"
-         
-         try {
-             const data = await loginUser({ email, password })
-             localStorage.setItem("loggedin", true)
-             window.location.assign("/");
+         .searchParams.get("redirectTo") || "/cart";
+try {
+        const data = await loginUser({ email, password })
+        localStorage.setItem("loggedin", true)
+        window.location.assign("/cart")
 
         return (
         redirect(pathname)

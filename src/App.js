@@ -20,10 +20,9 @@ import Error from "./Pages/Error"
 import { requireAuth } from "./utils"
 import Success from "./Success"
 import NotFound from "./Components/NotFound"
+import Redirect from "./Redirect"
 
-
-
-    const router = createBrowserRouter(createRoutesFromElements(
+   const router = createBrowserRouter(createRoutesFromElements(
       <Route element={<Layout />} >
         <Route path="/" element={<OpeningPage />} />   
         <Route path="about" element={<About />} />
@@ -33,12 +32,16 @@ import NotFound from "./Components/NotFound"
        action={loginAction}
        />
       
-        <Route path="cart" element={<Cart />} /> 
+        <Route path="cart" element={<Cart />} 
+          loader={async ({ request }) => await requireAuth(request)}
+          errorElement={<Redirect />}
+        /> 
         <Route 
          path="cart/checkout"
          element={<Checkout />}
          loader={async ({ request }) => await requireAuth(request)}
-         />
+         errorElement={<Redirect />}
+        />
         <Route path="success" element={<Success />}></Route>
 
         <Route path="products" element={<Products />}

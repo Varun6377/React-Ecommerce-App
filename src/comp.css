@@ -40,7 +40,7 @@ header {
 }
 
 header img {
-  margin-left: -28px;
+  margin-left: -30px;
   margin-top: -30px;
 }
 
@@ -49,7 +49,7 @@ header a {
   color: #4D4D4D;
   font-weight: 600;
   font-size: 32px;
-  padding: 5px 48px;
+  padding: 5px 52px;
   margin-top: 30px;
 }
 
@@ -142,15 +142,51 @@ footer {
 
 .logout button {
   position: relative;
-  padding: 5px 5px;
+  font-size: 22px;
+  padding: 3px 8px 3px 8px;
   background-color: #161616;
   color: #fff;
   border-radius: 5px;
   top: 30px;
-  left: 35px;
-}
+  left: 50px;
+} 
 
 .logout button:hover {
   background-color: #fff;
   color: #161616;
+}
+
+.redirect {
+  position: relative;
+  top: 250px;
+  left: 420px;
+}
+
+.redirect img {
+  position: relative;
+  bottom: 150px;
+  left: 60px;
+}
+
+.redirect h1{
+  position: relative;
+  bottom: 120px;
+  left: 22px;
+  font-size: 40px;
+}
+
+.redirect-login {
+  position: relative;
+  bottom: 60px;
+  left: 130px;
+  font-size: 35px;
+  padding: 10px ;
+  border-radius: 5px;
+  background-color: #161616;
+  color: #fff;
+}
+
+.redirect-login:hover {
+  background-color: gray;
+  color: #fff;
 }

@@ -68,7 +68,7 @@ Total Amount : ₹{product.qty * product.price}
 
 )})}
    
-<div className='checkout-cont'>  
+ <div className='checkout-cont'>  
 <NavLink to="checkout" className='checkout'>Checkout</NavLink>
   </div> 
   </div>

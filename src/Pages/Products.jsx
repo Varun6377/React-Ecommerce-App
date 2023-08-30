@@ -78,7 +78,6 @@ function Products(){
      }
      
      }
-
     
 const productElements =(search(displayedProducts).map(product => 
 <div key={product.id} className='product-cont'>
@@ -93,14 +92,14 @@ const productElements =(search(displayedProducts).map(product =>
 
 return (
   <>
-  
-<div className='search'>
+
+  <div className='search'>
 <label htmlFor="search-form" >
   <div className='wrapper'>
   
  <input 
  
-   type="search"
+ type="search"
    name='search-form'
    id='search-form'
    className='search-input'
@@ -158,18 +157,18 @@ Clear filter
 <select aria-label='form-select-sm' 
 className="dropdown-filter" name="price"
 onChange={(e) => sortProductsByPrice(e)}>
-  <option className="dropdown-filter" 
+  <option  
   value="FilterByprice" >Filter By price</option>
-  <option className="dropdown-filter"
+  <option 
   value="LowToHigh">Low To High</option>
-  <option className="dropdown-filter"
+  <option 
   value="HighToLow">High To Low</option>
 </select>     
 </div>
+  </div>
 <div className='list'>
   {productElements}
 </div> 
-</div>
 </>
 )}
 

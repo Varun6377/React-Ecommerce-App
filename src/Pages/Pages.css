@@ -1,31 +1,20 @@
-.home-page {
-  position: relative;
-  text-align: center;
-  color: white;
-}
- 
-.home-page img {
-  width: 1100px;
-  border-radius: 5px;
-} 
-
 .title {
   position: absolute;
   font-weight: 800;
-  top: 4px;
-  left: 8.5%;
-  font-size: 45px;
+  bottom: 450px;
+  right: 45%;
+  font-size: 42px;
 }
 
 .content {
   position: absolute;
-  top: 85px;
+  bottom: 250px;
   font-weight: 600;
   font-size: 35px;
   left: 11%;
 }
 
-.home-page a {
+.slide-1 a {
   position: absolute;
   display: inline-block;
   align-items: center;
@@ -38,16 +27,67 @@
   margin-top: 27px;
   padding-block: 1.25rem;
   color: white;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   border-radius: 10px;
   cursor: pointer;
-  left: 16%;
-  bottom: 80px;
+  right: 70%;
+  bottom: 80px
 }
 
-.home-page a:hover {
+.slide-1 a:hover {
  background-color: gray;
+}
+
+.slide-2 a {
+  position: absolute;
+  display: inline-block;
+  align-items: center;
+  text-align:center;
+  text-decoration: none;
+  background-color: black;
+  border: none;
+  width: 35%;
+  height: 100px;
+  margin-top: 27px;
+  padding-block: 1.25rem;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  right: 32%;
+  bottom: 60px
+}
+
+.slide-2 a:hover {
+  background-color: gray;
+}
+
+.slide-3 a {
+  position: absolute;
+  display: inline-block;
+  align-items: center;
+  text-align:center;
+  text-decoration: none;
+  background-color: black;
+  border: none;
+  width: 35%;
+  height: 100px;
+  margin-top: 27px;
+  padding-block: 1.25rem;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  right: 70%;
+  bottom: 60px
+}
+
+.slide-3 a:hover {
+background-color: #4D4D4D;
+color: #fff;
 }
 
 .qty-buttons {
@@ -59,11 +99,12 @@
 .minus  {
   position: relative;
   top: 4px;
-  left: 15px;
+  left: 18px;
   font-size: 20px;
   text-decoration: none;
-  padding: 2px 10px;
+  padding: 1px 8px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .empty {
@@ -75,6 +116,7 @@
   margin-right: 10px;
   margin-left: 10px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .empty:hover {
@@ -85,12 +127,13 @@
 
 .del {
   position: relative;
-  bottom: 90px;
+  bottom: 70px;
   left: 28px;
   font-size: 20px;
   text-decoration: none;
   padding: 2px 10px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .del:hover {
@@ -108,13 +151,14 @@
 
 .plus  {
   position: relative;
-  bottom: 100px;
-  left: 85px;
+  bottom: 77px;
+  left: 90px;
   font-size: 20px;
   text-decoration: none;
   color: #4D4D4D;
-  padding: 2px 10px;
+  padding: 2px 6px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .plus:hover  {
@@ -126,7 +170,9 @@
 .pro-qty {
   position: relative;
   left: 5%;
-  bottom: 48px;
+  bottom: 32px;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .list {
@@ -135,6 +181,10 @@
   justify-items: center;
   gap: 34px;
   margin-top: 57px;
+}
+
+.product-cont {
+  padding-inline: 20px;
 }
 
 .product-cont a {
@@ -157,38 +207,50 @@
   align-items: center;
 }
 
-.ord-sum {
-  margin-bottom: 15px;
+.order-summary {
+  margin-bottom: 25px;
 }
 
 .back-to-shop  {
   margin-bottom: 15px;
   color: #4D4D4D;
   font-size: 20px;
-  padding-inline: 145px; 
+  padding-inline: 70px; 
 }
 
 .back-to-shop a {
-  font-size: medium;
+  font-size: 25px;
   font-weight: bold;
   color: #4D4D4D;
-  }
+}
 
-  .pay-now {
+.back-to-shop a:hover {
+  color: brown;
+}
+
+.pay-now {
     background-color: #161616;
-    color: #fff;
-    font-size: 30px;
-    width: 170px;
-    padding: 10px 20px;
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    width: 180px;
+    height: 55px;
     margin-top: 50px;
+    margin-left: 20px;
     cursor: pointer;
     border-radius: 5px;
-  }
+}
 
-  .pay-now:hover {
-    background-color: #4D4D4D;
-    color:#f5f5f5 ;
-  }
+.pay-now a{
+  position: relative;
+  bottom: 5px;
+  left: 5px;
+}
+
+.pay-now:hover {
+    background-color: gray;
+    color: #fff
+ }
 
 .add-to-cart button{
     margin-top: 10px;
@@ -196,18 +258,21 @@
     border-radius: 5px;
     font-size: 25px;
     cursor: pointer;
-  }
-
+}
 
 .add-to-cart button:hover {
    background-color: black;
    color: white;
-  }
+}
 
 .go-to-cart a {
   font-size: 20px;
   font-weight: bold;
   color: #4D4D4D;
+}
+
+.go-to-cart a:hover {
+  color: brown;
 }
 
 .filter-buttons {
@@ -221,24 +286,24 @@
 .filter-buttons button {
   margin-right: 120px;
   cursor: pointer;
-  padding: 5px;
-  font-size: 25px;
+  padding: 8px;
+  font-size: 22px;
   font-weight: 600;
 }
 
 .product-type {
-  height: 39px;
-  padding: 6px 24px;
+  height: 46.5px;
+  font-style: normal;
+  font-weight: 500;
   border: none;
   border-radius: 5px;
-  color: #4D4D4D;
+  color: black;
   transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 10px;
-  ;
-}.qty-price
+  margin-left: 10px;
+}
 
 .product-type:hover {
-  color: #fff;
+  color: #FFEAD0;
 }
 
 .product-type:focus {
@@ -249,20 +314,24 @@
   color: #ffffff;
 }
 
-.product-type.Headphones:hover, .product-type.Headphones.selected {
-  background-color: #161616
+.product-type.Headphones:hover, .product-type.Headphones.selected { 
+  background-color: #161616;
+  color: #fff
 } 
 
 .product-type.Earbuds:hover, .product-type.Earbuds.selected {
-  background-color: #161616
+  background-color: #161616;
+  color: #fff;
 } 
 
 .product-type.Speakers:hover, .product-type.Speakers.selected {
-  background-color: #161616
+  background-color: #161616;
+  color: #fff
 } 
 
 .product-type.Accessories:hover, .product-type.Accessories.selected {
-  background-color: #161616
+  background-color: #161616;
+  color: #fff
 } 
 
 .product-type.clear-filters {
@@ -276,14 +345,15 @@
   text-decoration: underline;
   background-color: transparent;
   color: #4D4D4D;
-}
+  margin-left: 0px;
+  margin-right: 10px;
+  }
 
 .wrapper {
   position: relative;
   display: flex;
   min-width: 100px;
 }
-
 
 .search-icon {
   position: absolute;
@@ -299,15 +369,15 @@
     border: 1px solid grey;
     border-radius: 5px;
     height: 40px;
-    width: 80%;
+    width: 1000px;
     padding: 15px 20px 15px 40px;
+    margin-top: 5px;
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 16px;
     outline: 0;
     background-color: #f5f5f5;
     font-size: 18px;
 }
-
 
 .search-input:hover, .search-input:focus {
   border: 1.9px solid #161616;
@@ -318,7 +388,8 @@
   font-size: 16px;
   font-weight: 500;
   padding-inline: 10px;
-  margin-left: 10px;
+  margin-top: 9px;
+  margin-left: 16px;
   height: 35px;
   border-radius: 5px;
   cursor: pointer
@@ -326,7 +397,7 @@
 
 .details-price {
   margin-top: 10px;
-font-size: 20px;
+  font-size: 25px;
 }
 
 .details- button{
@@ -353,7 +424,7 @@ font-size: 20px;
 
 .qty-price {
   position: relative;
-  bottom: 99px;
+  bottom: 55px;
   font-size: 30px;
   margin-bottom: 7px;
   font-weight: 400;
@@ -361,13 +432,14 @@ font-size: 20px;
 
 .checkout-cont {
   position: relative;
-  bottom: 90px;
+  bottom: 60px;
+  left: 50px;
   margin-top: 30px;
   font-weight: bold;
 }
 
 .checkout-cont a {
-  font-size: 30px;
+  font-size: 35px;
   text-decoration: none;
   color: #4D4D4D;
   padding: 10px 10px;
@@ -391,7 +463,7 @@ font-size: 20px;
 }
 
 .checkout-total {
-  font-size: 20px;
+  font-size: 25px;
   padding-inline: 70px;
 }
 
@@ -511,7 +583,7 @@ font-size: 20px;
   bottom: 200px;
   background-color: #161616;
   color: #fff;
-  font-size: 202px;
+  font-size: 20px;
   width: 170px;
   padding: 10px 20px;
   cursor: pointer;
@@ -519,34 +591,34 @@ font-size: 20px;
 }
 
 .back-to-home:hover {
-  color: brown;
+  background-color: #4D4D4D;
+  color: #fff;
 }
 
 .cart {
   position: relative;
-  top: 80px;
+  top: 180px;
   left: 365px;
 }
 
 .cart img{
   position: relative;
-  top: 20px;
+  bottom: 100px;
   border: none;
   background-color: #fff;
-  margin-top: -100px;
   width: 500px;
 }
 
 .cart h1{
   position: relative;
-  top: 30px;
-  left: 92px;
+  bottom: 80px;
+  left: 100px;
   font-size: 38px;
 }
 
 .cart h2{
   position: relative;
-  top: 50px;
+  bottom: 50px;
   left: 2%;
   font-size: 30px;
   font-weight: lighter;
@@ -554,7 +626,7 @@ font-size: 20px;
 
 .do-it {
   position: relative;
-  bottom: 10px;
+  bottom: 100px;
   left: 28.5%;
   background-color: #161616;
   color: #fff;
@@ -565,7 +637,7 @@ font-size: 20px;
   cursor: pointer;
   border-radius: 5px;
 }
-back-to-home
+
 .do-it:hover {
   background-color: #4D4D4D;
 }

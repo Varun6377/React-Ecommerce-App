@@ -25,9 +25,9 @@ return(
      <NavLink to='/products' type="submit" >← Back Shopping</NavLink>
           </div>   
      <div className='checkout-total'>
-     <h1 className='ord-sum'>Order summary</h1>
-     {cart.map(itemList)}
-     <span className='total'>Total Amount : </span>₹{total}
+     <h1 className='order-summary'>Order summary</h1>
+            {cart.map(itemList)}
+      <span className='total'>Total Amount : </span>₹{total}
      <br></br>
      <div className='pay-now'>
      <NavLink to="/success">Pay Now</NavLink>
