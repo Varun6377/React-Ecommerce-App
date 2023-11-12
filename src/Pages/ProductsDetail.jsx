@@ -3,7 +3,7 @@ import { useLocation, useLoaderData, NavLink
 , } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { getProduct } from '../api.js'
-import { addToCart } from '../redux/features/cartSlice.js'
+import { addToCart } from '../redux/cartSlice.js'
 
 export function loader({ params }) {
    return getProduct(params.id)

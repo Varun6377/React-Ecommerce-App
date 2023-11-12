@@ -44,4 +44,4 @@ emptyCart:(state,action)=>{
 
 export const {addToCart, deleteFromCart, removeFromCart, emptyCart} = cartSlice.actions
 
-export default cartSlice.reducer
+export default cartSlice.reducer  
